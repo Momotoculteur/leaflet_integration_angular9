@@ -1,0 +1,39 @@
+<div class="lastPlan"
+    style="height: 100%;"
+    leaflet 
+    [leafletOptions]="options"
+    [leafletLayers]="layers">
+</div>
+
+<div class="firstPlan legend">
+    <div fxLayout="column" fxLayoutGap="10px">
+        <div fxLayoutAlign="center">
+            <h3 style="margin: 0px;">
+                Cas confirmés
+            </h3>
+        </div>
+        <div fxFlex fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="space-evenly">
+            <div fxLayoutGap="5px" fxLayout="column" fxLayoutAlign="center">
+                <div  *ngFor="let color of selectedLegendColorGradient" style="background: {{color}}" class="squareLegend"></div>
+            </div>
+            <div fxLayoutGap="5px" fxLayout="column" fxLayoutAlign="center">
+                <div  *ngFor="let info of selectedLegendInfos">{{info}}</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="firstPlan legendTop" *ngIf="regionName">
+    <div fxFlex fxLayout="row" fxLayoutAlign="center">
+        <div fxLayout="column" fxLayoutAlign="center">
+                <h2 fxLayoutAlign="center" style="margin: 0px;font-weight: bold;">
+                    {{regionName}}
+                </h2>
+                <div fxLayoutAlign="center">
+                    <h3 style="margin: 0px;">
+                        {{regionConfirmed}} Cas
+                    </h3>     
+                </div>
+        </div>
+    </div>       
+</div>

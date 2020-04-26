@@ -1,0 +1,30 @@
+.firstPlan {
+    z-index: 2;
+}
+
+.lastPlan {
+    z-index: 1;
+}
+
+.squareLegend {
+    width: 20px;
+    height: 20px;
+}
+
+.legend {
+    width: 150px;
+    height: 200px;
+    position: fixed;
+    bottom:60px;
+    right:40px;
+    background-color: white;
+}
+
+.legendTop {
+    width: 200px;
+    height: 150px;
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    background-color: white;
+}
